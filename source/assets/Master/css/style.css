@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+} */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 10000;
+    transition: 0.6s;
+}
+
+header .logo {
+    position: relative;
+    transition: 0.6s;
+    cursor: pointer;
+    margin: -20px;
+}
+
+header #toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+header #toggle:before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+header #toggle:after {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+.banner.active header #toggle:before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.banner.active header #toggle:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.banner.active {
+    transform: translateX(-400px);
+}
+
+#navigation {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-image: radial-gradient( circle 465px at -15.1% -25%,  rgba(17,130,193,1) 0%, rgba(67,166,238,1) 49%, rgba(126,203,244,1) 90.2% );
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+
+#navigation.active {
+    right: 0;
+}
+
+#navigation ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#navigation ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+#navigation ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#navigation ul li a:hover {
+    color: #000;
+    transition: 0.8s;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content h2 {
+    margin-top: 65px;
+    /* border-left: 4px solid #000;
+    padding-left: 15px; */
+}
+
+.content h2 span {
+    /* background-image: radial-gradient( circle 465px at -15.1% -25%,  rgba(17,130,193,1) 0%, rgba(67,166,238,1) 49%, rgba(126,203,244,1) 90.2% ); */
+    color: #0057fa;
+    font-size: 2.7em;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-family: 'Kaushan Script', cursive;
+    pointer-events: none;
+}
+
+.content p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.content a {
+    position: relative;
+    margin-top: 40px;
+    padding: 28px 0;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    line-height: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.content a:after {
+    content: '\0279E';
+    font-size: 16px;
+    font-weight: 600;
+    color: #0057fa;
+    position: absolute;
+    opacity: 0;
+    top: 27px;
+    right: 100px;
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+.content a:hover {
+    color: #0057fa;
+}
+
+.content a:hover:after {
+    opacity: 1;
+    right: 20px;
+  }
+
+.content a svg,
+a svg rect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+}
+
+.content a svg rect{
+    stroke: #fff;
+    stroke-width: 2;
+    transition: 1s;
+    stroke-dasharray: 10, 10;
+}
+
+.content a svg rect:hover{
+    stroke-dasharray: 40,110;
+    stroke-dasharray: 610;
+    animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+.social {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 85px;
+}
+
+.social a {
+    list-style: none;
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 20px;
+    margin: 10px 0 0;
+}
+
+.social a:hover {
+    background: #0057fa;
+    transition: 0.4s ease-in;
+}
+
+/* -------========= responsive ===========----------- */
+
+@media (max-width: 840px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    .banner {
+        padding: 100px 50px 150px;
+    }
+
+    .banner h2 {
+        font-size: 1.8em;
+    }
+
+    .banner .content p,
+    .banner .content a {
+        font-size: 1em;
+    }
+
+    .banner.active {
+        transform: translateX(-250px);
+    }
+
+    #navigation {
+        width: 250px;
+        ;
+    }
+
+    #navigation ul li a {
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+
+    .social {
+        position: absolute;
+        bottom: 60px;
+        right: initial;
+        flex-direction: row;
+    }
+
+    .social a {
+        margin: initial;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 440px) {
+    .content h2 span {
+        font-size: 1em;
+    }
+}
+
+/*======-------- Main page ---------=========*/
+
+#algo .algo {
+    text-align: center;
+    flex-direction: column;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 10px 0;
+    justify-content: space-evenly;
+    display: flex;
+    height: 50vh;
+}
+
+#algo .algo-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#algo .algo-title span {
+    color: #0057fa;
+}
+
+#algo .algo-top p {
+    font-size: 1.0 rem;
+    margin-top: 5px;
+    line-height: 2.0rem;
+    font-weight: 400;
+}
+ 
+/* ------========= Algorithm Menu list ============---------- */
+
+.list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.list ul {
+    position: relative;
+}
+
+.list ul li {
+    position: relative;
+    left: 0;
+    color: #999;
+    list-style: none;
+    margin: 10px 0;
+    border-left: 2px solid #0057fa;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.list ul li::before  {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0057fa;
+    transform: scaleX(0);
+    transition: 0.5s;
+    transform-origin: left;
+}
+
+.list ul li:hover::before {
+    transform: scaleX(1);
+}
+
+.list ul li:hover {
+    left: 10px;
+}
+
+.list ul li span {
+    position: relative;
+    padding: 15px;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+    color: rgba(5, 5, 5, 0.705);
+    width: 500px;
+    text-transform: uppercase;
+    left: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.list ul li span:after {
+    content: '\0279E';
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: 500px;
+    transition: 0.6s;
+}
+
+.list ul li span:hover {
+    color: #fff;
+}
+
+.list ul li span:hover:after {
+    opacity: 1;
+    right: 30px;
+  }
+
+/* =======---footer----------- */
+
+
+footer {
+    padding: 80px 0;
+    background-color: #0c0c17;
+    border-top: 180px solid #ffffff;
+}
+
+footer .logo1 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+footer .logo1 a {
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-family: 'Alegreya SC', serif;
+}
+
+footer .social1 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+footer .social1 a {
+    color: #999999;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 10px;
+    font-size: 18px;
+    transition: all .8s ease;
+}
+
+footer .social1 a:hover:nth-child(1) {
+    color: #1877f2;
+    transition: all .5s ease;
+}
+
+footer .social1 a:hover:nth-child(2) {
+    color: #ffffff;
+    transition: all .5s ease;
+}
+
+footer .social1 a:hover:nth-child(3) {
+    color: #007bb5;
+    transition: all .5s ease;
+}
+
+footer .social1 a:hover:nth-child(4) {
+    color: #1da1f2;
+    transition: all .5s ease;
+}
+
+.copyright {
+    background-color: #0c0c17;
+    border-top: 1px solid #1d1d27;
+    padding: 15px;
+}
+
+.copyright p {
+    color: #838383;
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+
+
+/*---------------- main_page footer section------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
