@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>| Algo-Menu |</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/source/assets/Images/logo/lg3.png">
+
+        <!-- ============================================ fonts ============================================= -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- ====================================== Bootstrap css file======================================== -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- ======================================= css file=======================-========================= -->
+        <link rel="stylesheet" href="/source/assets/Master/css/style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <!-- ======================================= icons =================================================== -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    </head>
+
+    <body>
+
+        <!-- ======================================= animate scrolldown =================================================== -->
+        <div class="scrolldown"><b>SCROLL DOWN - -</b><span></span></div>
+        
+        <header>
+            <a href="" class="logo"><img src="/source/assets/Images/logo/lg3.png" alt=""></a>
+            <div class="menuToggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="" class="active">Menu</a></li>
+                <li class="block"><a href="/source/templates/registration/registration.html"><span>Logout</span></a></li>
+                <!-- <li class="none"><a href="#"><span>Logout</span></a></li> -->
+            </ul>
+        </header>
+
+        <!-- ======================================= Header with Menus =================================================== -->
+
+        <section id="algo">
+            <div data-aos="fade-up" data-aos-duration="500">
+                <div class="algo container">
+                    <div class="algo-top">
+                        <h1 class="algo-title">Algo <span>Visualizer</span></h1>
+                        <p>The best way to understand complex data structures is to see them in action. 
+                            This project is developed in an <br> interactive animations for a variety of 
+                            data structures and algorithms. 
+                        </p>  
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <div data-aos="fade-up" data-aos-duration="2000">
+                <ul>
+                    <li><a href="./algorithms/insertion_sort.html"><span>Insertion Sort</a></span></li>
+                    <li><a href="./algorithms/selection_sort.html"><span>Selection Sort</a></span></li>
+                    <li><a href="./algorithms/bubble_sort.html"><span>Bubble Sort</a></span></li>
+                    <li><a href="./algorithms/merge_sort.html"><span>Merge Sort</a></span></li>
+                    <li><a href="./algorithms/quick_sort.html"><span>Quick Sort</a></span></li>
+                    <li><a href="./algorithms/heap_sort.html"><span>Heap Sort</a></span></li>
+                </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================= footer section =================================================== -->
+
+        <section>
+            <footer>
+                <div class="footer_sec">
+                    <div class="head">
+                        <div class="logo">
+                            <a href="">Nikithkumar N</a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.facebook.com/itznikith.kumar/"><i class="fab fa-facebook"></i></a>
+                            <a href="https://github.com/TheThunderB0lt/"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/nikithkumar/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com/NIKITHKUMARN1/"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+                <div class="copy_right">
+                    <p class="text-center">Designed and built with <span class="icon"><i class="fa fa-heart fa-lg"></i></span> by <a href="" target="_blank"> The ThunderBolt</a></p>
+                    <!-- <p>&copy; 2020 <span>NIKITH KUMAR N</span> | All Rights Reserved</p> -->
+                </div>
+        </section>
+
+        <!-- ======================================= Navbar navigation =================================================== -->
+
+        <script type="text/javascript">
+            window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+            });
+            
+            function toggleMenu() {
+                const menuToggle = document.querySelector('.menuToggle');
+                const navigation = document.querySelector('.navigation');
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+
+        <!--=========================== Animate on scroll js file=========================== -->
+
+        <script>
+            AOS.init();
+        </script>
+
+    </body>
+
+</html>
