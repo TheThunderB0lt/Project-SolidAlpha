@@ -623,19 +623,19 @@ a svg rect {
     position: relative;
     width: 50px;
     height: 50px;
-    background: url(/source/assets/Images/icons/m1.png);
+    background: url(/source/assets/Images/icons/m2.png);
     background-size: 35px;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.3s;
   }
   .menuToggle.active {
-    background: url(/source/assets/Images/icons/c1.png);
+    background: url(/source/assets/Images/icons/c5.png);
     background-size: 35px;
     background-repeat: no-repeat;
     background-position: center;
-    transition: 0.4s;
+    transition: 0.3s;
   }
   header.sticky .menuToggle {
     filter: invert(0);
