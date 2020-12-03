@@ -1,0 +1,254 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| Quick-Sort |</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/source/assets/Images/logo/lg3.png">
+
+    <!-- ============================================ fonts ============================================= -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+
+    <!-- ====================================== Bootstrap css file======================================== -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- ======================================= stylesheet links =================================================== -->
+    <link rel="stylesheet" href="/source/assets/Master/css/container.css" />
+    <link rel="stylesheet" href="/source/assets/Master/css/style.css" />
+    
+    <!-- ======================================= icons & aos =================================================== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+  </head>
+
+  <body>
+    <!-- ======================================= scroll up button =================================================== -->
+    <a id="button"></a>
+
+    <!-- ======================================= animate scrolldown =================================================== -->
+    <div class="scrolldown"><b>SCROLL DOWN - -</b><span></span></div>
+
+    <header>
+      <a href="" class="logo"><img src="/source/assets/Images/logo/lg3.png" alt="" /></a>
+      <div class="menuToggle" onclick="toggleMenu();"></div>
+      <ul class="navigation">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/source/templates/Master/algo_menu.html">Menu</a></li>
+        <li><a href=""  class="active">Container</a></li>
+        <li class="block"><a href="/source/templates/registration/registration.html"><span>Logout</span></a></li>
+        <!-- <li class="none"><a href="#"><span>Logout</span></a></li> -->
+      </ul>
+    </header>
+
+    <section id="algo1">
+      <div data-aos="fade-up" data-aos-duration="500">
+        <div class="algo container">
+          <div class="algo-top">
+            <h1 class="algo-title">Algo <span>Visualizer</span></h1>
+            <p>
+              The best way to understand complex data structures is to see them
+              in action. This project is developed in an <br />
+              interactive animations for a variety of data structures and
+              algorithms.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== Algorithm buttons with box =========================================== -->
+
+    <section class="cont">
+      <div class="viz" data-aos="fade-up"
+      data-aos-duration="2000">
+        <canvas id="canvas" width="850" height="450"></canvas>
+        <div class="gen">
+          <div id="rgn">
+            <h1 class="title">Quick <span>sort</span></h1>
+            <p>Delay Time :</p>
+            <input type="range" id="rangeTime" min="1" max="100" value="10" />
+            <span id="showTime">10</span><br />
+            <p>Array Size :</p>
+            <input type="range" id="rangeArr" min="10" max="200" value="10"/>
+            <span id="showLength">10</span>
+          </div>
+          <button class="btn1" onclick="quickSort(Arr)">Start</button>
+          <button class="btn1" id="randomize" onclick="randomArr()">
+            Shuffle
+          </button>
+          <button class="btn1" id="reset_algo" onclick="reset_click()">
+            Reset
+          </button>
+        </div> 
+      </div>
+    </section>
+
+    <!-- ===================================== Algorithm defination with box =========================================== -->
+
+    <section class="algo-contents">
+      <div class="container2">
+        <div class="algo-def">
+          <p class="def">
+            <span class="tit">Defination :</span> <br />
+            <a href="https://en.wikipedia.org/wiki/Quicksort">Quick sort</a>
+            t is a divide and conquer algorithm which relies on a partition operation: 
+            to partition an array an element called a pivot is selected. All elements smaller 
+            than the pivot are moved before it and all greater elements are moved after it. 
+            This can be done efficiently in linear time and in-place. The lesser and greater 
+            sublists are then recursively sorted. Efficient implementations of quicksort 
+            (with in-place partitioning) are typically unstable sorts and somewhat complex, 
+            but are among the fastest sorting algorithms in practice. Together with its modest 
+            O(log n) space usage, quicksort is one of the most popular sorting algorithms and is 
+            available in many standard programming libraries. The most complex issue in quicksort 
+            is choosing a good pivot element; consistently poor choices of pivots can result in drastically 
+            slower O(n²) performance, if at each step the median is chosen as the pivot then the algorithm 
+            works in O(n log n). Finding the median however, is an O(n) operation on unsorted lists and 
+            therefore exacts its own penalty with sorting.
+          </p>
+          <p class="tc">
+            <span class="tit">Performance</span> <br />
+            <span class="one">Best-case Time complexity: </span>
+            <span class="theory">O(nlogn)</span> <br />
+            <span class="one">Average-case Time complexity: </span>
+            <span class="theory">O(nlogn)</span> <br />
+            <span class="one">worst-case Time complexity: </span>
+            <span class="theory">O(n<span>&#178;</span>)</span> <br />
+          </p>
+          <p class="sc">
+            <span class="tit">Space complexity</span> <br />
+            <span class="one">worst-case Space complexity: </span>
+            <span class="theory">O(logn)</span> <br />
+          </p>
+        </div>
+        <div class="algo-box">
+          <pre class="pseudo_code">
+
+        async function quickSort(arr){
+            await QS(0,len-1);
+            async function partition(pivot,left,right){
+                const pivotValue = arr[pivot];
+                var	partitionIndex = left;
+                var i = left;
+    
+                for(var i = left; i < right; i++){
+                        if(arr[i] < pivotValue){
+                                await swapIndex(arr, i, partitionIndex);
+                                await drawArr(arr);
+                            await sleep(time);
+                                partitionIndex++;
+                        }
+                    }
+                await swapIndex(arr, right, partitionIndex);
+                await drawArr(arr);
+                await sleep(time);
+                return Promise.resolve(partitionIndex);
+            }
+            async function QS(left,right){
+                if(left < right){
+                    const pivot = right;
+                    const partitionIndex =  await partition(pivot,left,right);
+                    await QS(left,partitionIndex-1);
+                    await QS(partitionIndex+1,right);
+                    }
+                return Promise.resolve();	
+            }
+        }        
+    
+              </pre
+          >
+        </div>
+      </div>
+
+      <!-- ===================================== Footer section=========================================== -->
+
+      <footer class="footer1">
+        <div class="footer_sec">
+          <div class="head">
+            <div class="logo">
+              <a href="">Nikithkumar N</a>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/itznikith.kumar/"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://github.com/TheThunderB0lt/"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/nikithkumar/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://twitter.com/NIKITHKUMARN1/"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="copy_right1">
+        <p class="text-center">
+          Designed and built with
+          <span class="icon"><i class="fa fa-heart fa-lg"></i></span> by
+          <a href="#" target="_blank"> The ThunderBolt</a>
+        </p>
+        <!-- <p>&copy; 2020 <span>NIKITH KUMAR N</span> | All Rights Reserved</p> -->
+      </div>
+    </section>
+
+    <!-- ======================================= Navbar navigation =================================================== -->
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+      function toggleMenu() {
+        const menuToggle = document.querySelector(".menuToggle");
+        const navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+
+    <!-- ============================== javascript scrolldown aimated button =================================== -->
+
+    <script>
+      var btn = $("#button");
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 750) {
+          btn.addClass("show");
+        } else {
+          btn.removeClass("show");
+        }
+      });
+
+      btn.on("click", function (e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "300");
+      });
+    </script>
+
+    <!--=========================== Animate on scroll js file=========================== -->
+
+    <script>
+      AOS.init();
+  </script>
+
+
+    <!-- ======================================== javascript files========================================= -->
+
+    <script src="/source/assets/Master/js/App.js"></script>
+    <script src="/source/assets/Master/js/algorithms/quick_sort.js"></script>
+  </body>
+</html>
