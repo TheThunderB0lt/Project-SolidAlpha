@@ -36,8 +36,13 @@
             <ul class="navigation">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="" class="active">Menu</a></li>
-                <li class="block"><a href=""><span>Login</span></a></li>
-                <!-- <li class="none"><a href="#"><span>Logout</span></a></li> -->
+                <li class="logged-in" style="display: none">
+					<a
+						href="/source/templates/registration/login.html"
+						id="logout"
+						><span class="sign">Logout</span></a
+					>
+				</li>
             </ul>
         </header>
 
@@ -108,6 +113,15 @@
                 navigation.classList.toggle('active');
             }
         </script>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+
+
+        <!--=========================== js file ===================================== -->
+		<script src="/source/assets/Registration/js/login.js"></script>
+		<script src="/source/assets/Master/js/index.js"></script>
 
         <!--=========================== Animate on scroll js file=========================== -->
 
