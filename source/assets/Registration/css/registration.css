@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 
 section {
 	position: relative;
 	min-height: 100vh;
-	background: linear-gradient(109.5deg, rgba(76, 221, 242, 1) 11.2%, rgba(92, 121, 255, 1) 91.1%);
+	background: linear-gradient(
+		109.5deg,
+		rgba(76, 221, 242, 1) 11.2%,
+		rgba(92, 121, 255, 1) 91.1%
+	);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -22,8 +26,8 @@ section .container {
 	width: 850px;
 	height: 500px;
 	background: rgb(255, 255, 255);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16),
-		0 8px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
+		0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
 	border-radius: 4px;
 }
@@ -105,14 +109,19 @@ section .container .signupBx .formBx form .logup_btn {
 	transition: 0.5s;
 	color: #111;
 	text-transform: uppercase;
-	border: 1px solid rgba(150, 147, 147, 0.274);
+	border: none;
 	border-radius: 4px;
+	outline: none;
 	margin-top: 20px;
 }
 
 section .container .user .formBx form .login_btn:hover,
 section .container .signupBx .formBx form .logup_btn:hover {
-	background: linear-gradient(103deg, rgba(137, 247, 234, 1) 7.3%, rgba(102, 117, 241, 1) 100.2%);
+	background: linear-gradient(
+		103deg,
+		rgba(137, 247, 234, 1) 7.3%,
+		rgba(102, 117, 241, 1) 100.2%
+	);
 	color: rgba(255, 255, 255, 0.911);
 }
 
@@ -121,65 +130,20 @@ section .container .user .formBx form .signup {
 	margin-top: 20px;
 	font-size: 12px;
 	letter-spacing: 1px;
-	color: #555;
+	color: rgb(43, 42, 42);
 	font-weight: 300;
 }
 
 section .container .user .formBx form .signup a {
-	font-weight: 600;
-	font-size: 14px;
+	font-weight: 500;
+	font-size: 11px;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #228bec;
 	cursor: pointer;
-}
-
-section .container .signupBx {
-	pointer-events: none;
-}
-
-section .container.active .signupBx {
-	pointer-events: initial;
-}
-
-section .container .signupBx .formBx {
-	left: 100%;
-	transition: 0.5s;
-}
-
-section .container.active .signupBx .formBx {
-	left: 0;
-	transition: 0.5s;
-}
-
-section .container .signupBx .imgBx {
-	left: -100%;
-	transition: 0.5s;
-}
-
-section .container.active .signupBx .imgBx {
-	left: 0;
-	transition: 0.5s;
-}
-
-section .container .signinBx .formBx {
-	left: 0;
-	transition: 0.5s;
-}
-
-section .container.active .signinBx .formBx {
-	left: 100%;
-	transition: 0.5s;
-}
-
-section .container .signinBx .imgBx {
-	left: 0;
-	transition: 0.5s;
-}
-
-section .container.active .signinBx .imgBx {
-	left: -100%;
-	transition: 0.5s;
+	border-bottom: 1px solid #0057fa;
+	/* border-radius: 4px; */
+	padding: 1px 4px;
 }
 
 .social {
@@ -218,30 +182,12 @@ section .container.active .signinBx .imgBx {
 	transition: all 0.5s ease;
 }
 
-span {
-	position: absolute;
-	right: 55px;
-	transform: translate(0, -50%);
-	top: 50%;
-	cursor: pointer;
-}
-
-.eye-class {
-	position: absolute;
-	right: 55px;
-	transform: translate(0, -50%);
-	top: 59%;
-	cursor: pointer;
-}
-
-span #eye {
-	color: #86868f;
-	font-size: 13px;
-}
-
-.eye-class #eye1 {
-	color: #86868f;
-	font-size: 13px;
+.error {
+	color: #fa002a;
+	font-size: 11px;
+	font-weight: 400;
+	padding-top: 5px;
+	pointer-events: none;
 }
 
 @media (max-width: 990px) {
@@ -254,4 +200,8 @@ span #eye {
 	section .container .user .formBx {
 		width: 100%;
 	}
+}
+
+.none {
+	display: none;
 }
