@@ -1,0 +1,106 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE-edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/> -->
+		<title>| Signup |</title>
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="/source/assets/Images/logo/lg3.png"
+		/>
+
+		<!-- ============================================ fonts ============================================= -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- ====================================== Bootstrap css file======================================== -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		/>
+
+		<!-- ======================================= css file=======================-========================= -->
+		<link
+			rel="stylesheet"
+			href="/source/assets/registration/css/registration.css"
+		/>
+
+		<!-- ======================================= icons =================================================== -->
+		<link
+			href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+	</head>
+
+	<body>
+		<section>
+			<div class="container">
+				<!-- =========================================== sign-up box ================================================= -->
+				<div class="user signupBx" id="modal-signup">
+					<div class="formBx">
+						<form id="signup-form">
+							<h2>Create account</h2>
+							<input
+								type="text"
+								name=""
+								placeholder="username"
+								id="user_name1"
+								autocomplete="off"
+								required=""
+							/>
+							<input
+								type="email"
+								name=""
+								placeholder="Email address"
+								id="email_id1"
+								autocomplete="off"
+								required=""
+							/>
+							<input
+								type="password"
+								name=""
+								placeholder="password"
+								id="pass_word1"
+								required=""
+							/>
+							<button class="logup_btn">Sign up</button>
+							<p class="error"></p>
+							<p class="signup">
+								Already have an account?
+								<a href="./login.html">Sign in</a>
+							</p>
+							<div class="social">
+								<a href="#"><i class="fab fa-google"></i></a>
+								<a href="#"><i class="fab fa-facebook"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-github"></i></a>
+							</div>
+						</form>
+					</div>
+					<div class="imgBx">
+						<img
+							src="/source/assets/Registration/images/signup.svg"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===================================== js file ===================================================== -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="/source/assets/Registration/js/signup.js"></script>
+	</body>
+</html>
