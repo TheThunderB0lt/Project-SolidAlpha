@@ -1,143 +1,173 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>| Bubble-Sort |</title>
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="/source/assets/Images/logo/lg3.png"
-    />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE-edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>| Bubble-Sort |</title>
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="/source/assets/Images/logo/lg3.png"
+		/>
 
-    <!-- ============================================ fonts ============================================= -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+		<!-- ============================================ fonts ============================================= -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
 
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-    />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+		/>
 
-    <!-- ====================================== Bootstrap css file======================================== -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<!-- ====================================== Bootstrap css file======================================== -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		/>
+		<link
+			href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+			rel="stylesheet"
+		/>
 
-    <!-- ======================================= stylesheet links =================================================== -->
-    <link rel="stylesheet" href="/source/assets/Master/css/container.css" />
-    <link rel="stylesheet" href="/source/assets/Master/css/style.css" />
+		<!-- ======================================= stylesheet links =================================================== -->
+		<link rel="stylesheet" href="/source/assets/Master/css/container.css" />
+		<link rel="stylesheet" href="/source/assets/Master/css/style.css" />
 
-    <!-- ======================================= icons & aos =================================================== -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
-  </head>
+		<!-- ======================================= icons & aos =================================================== -->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+	</head>
 
-  <body>
-    <!-- ======================================= scroll up button =================================================== -->
-    <a id="button"></a>
+	<body>
+		<!-- ======================================= scroll up button =================================================== -->
+		<a id="button"></a>
 
-    <!-- ======================================= animate scrolldown =================================================== -->
-    <div class="scrolldown"><b>SCROLL DOWN - -</b><span></span></div>
+		<!-- ======================================= animate scrolldown =================================================== -->
+		<div class="scrolldown"><b>SCROLL DOWN - -</b><span></span></div>
 
-    <header>
-      <a href="" class="logo"
-        ><img src="/source/assets/Images/logo/lg3.png" alt=""
-      /></a>
-      <div class="menuToggle" onclick="toggleMenu();"></div>
-      <ul class="navigation">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/source/templates/Master/algo_menu.html">Menu</a></li>
-        <li><a href="" class="active">Container</a></li>
-        <li class="block">
-          <a href=""
-            ><span>Login</span></a
-          >
-        </li>
-        <!-- <li class="none"><a href="#"><span>Logout</span></a></li> -->
-      </ul>
-    </header>
+		<header>
+			<a href="" class="logo"
+				><img src="/source/assets/Images/logo/lg3.png" alt=""
+			/></a>
+			<div class="menuToggle" onclick="toggleMenu();"></div>
+			<ul class="navigation">
+				<li><a href="/index.html">Home</a></li>
+				<li>
+					<a href="/source/templates/Master/algo_menu.html">Menu</a>
+				</li>
+				<li><a href="" class="active">Container</a></li>
+				<li class="logged-in" style="display: none">
+					<a
+						href="/source/templates/registration/login.html"
+						id="logout"
+						><span class="sign">Logout</span></a
+					>
+				</li>
+			</ul>
+		</header>
 
-    <section id="algo1">
-      <div data-aos="fade-up" data-aos-duration="500">
-        <div class="algo container">
-          <div class="algo-top">
-            <h1 class="algo-title">Algo <span>Visualizer</span></h1>
-            <p>
-              The best way to understand complex data structures is to see them
-              in action. This project is developed in an <br />
-              interactive animations for a variety of data structures and
-              algorithms.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+		<section id="algo1">
+			<div data-aos="fade-up" data-aos-duration="500">
+				<div class="algo container">
+					<div class="algo-top">
+						<h1 class="algo-title">Algo <span>Visualizer</span></h1>
+						<p>
+							The best way to understand complex data structures
+							is to see them in action. This project is developed
+							in an <br />
+							interactive animations for a variety of data
+							structures and algorithms.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- ===================================== Algorithm buttons with box =========================================== -->
+		<!-- ===================================== Algorithm buttons with box =========================================== -->
 
-    <section class="cont">
-      <div class="viz" data-aos="fade-up" data-aos-duration="2000">
-        <canvas id="canvas" width="850" height="450"></canvas>
-        <div class="gen">
-          <div id="rgn">
-            <h1 class="title">Bubble <span>sort</span></h1>
-            <p>Delay Time :</p>
-            <input type="range" id="rangeTime" min="1" max="100" value="10" />
-            <span id="showTime">10</span><br />
-            <p>Array Size :</p>
-            <input type="range" id="rangeArr" min="10" max="200" value="10" />
-            <span id="showLength">10</span>
-          </div>
-          <button class="btn1" onclick="bubbelSort(Arr)">Start</button>
-          <button class="btn1" id="randomize" onclick="randomArr()">
-            Shuffle
-          </button>
-          <button class="btn1" id="reset_algo" onclick="reset_click()">
-            Reset
-          </button>
-        </div>
-      </div>
-    </section>
+		<section class="cont">
+			<div class="viz" data-aos="fade-up" data-aos-duration="2000">
+				<canvas id="canvas" width="850" height="450"></canvas>
+				<div class="gen">
+					<div id="rgn">
+						<h1 class="title">Bubble <span>sort</span></h1>
+						<p>Delay Time :</p>
+						<input
+							type="range"
+							id="rangeTime"
+							min="1"
+							max="100"
+							value="10"
+						/>
+						<span id="showTime">10</span><br />
+						<p>Array Size :</p>
+						<input
+							type="range"
+							id="rangeArr"
+							min="10"
+							max="200"
+							value="10"
+						/>
+						<span id="showLength">10</span>
+					</div>
+					<button class="btn1" onclick="bubbelSort(Arr)">
+						Start
+					</button>
+					<button class="btn1" id="randomize" onclick="randomArr()">
+						Shuffle
+					</button>
+					<button
+						class="btn1"
+						id="reset_algo"
+						onclick="reset_click()"
+					>
+						Reset
+					</button>
+				</div>
+			</div>
+		</section>
 
-    <!-- ===================================== Algorithm defination with box =========================================== -->
+		<!-- ===================================== Algorithm defination with box =========================================== -->
 
-    <section class="algo-contents">
-      <div class="container2">
-        <div class="algo-def">
-          <p class="def">
-            <span class="tit">Defination :</span> <br />
-            <a href="https://en.wikipedia.org/wiki/Bubble_sort">Bubble sort</a>
-            is a simple sorting algorithm. The algorithm starts at the beginning
-            of the data set. It compares the first two elements, and if the
-            first is greater than the second, it swaps them. It continues doing
-            this for each pair of adjacent elements to the end of the data set.
-            It then starts again with the first two elements, repeating until no
-            swaps have occurred on the last pass.
-          </p>
-          <p class="tc">
-            <span class="tit">Performance</span> <br />
-            <span class="one">Best-case Time complexity: </span>
-            <span class="theory">O(n<span>&#178;</span>)</span> <br />
-            <span class="one">Average-case Time complexity: </span>
-            <span class="theory">O(n<span>&#178;</span>)</span> <br />
-            <span class="one">worst-case Time complexity: </span>
-            <span class="theory">O(n)</span> <br />
-          </p>
-          <p class="sc">
-            <span class="tit">Space complexity</span> <br />
-            <span class="one">worst-case Space complexity: </span>
-            <span class="theory">O(1)</span> <br />
-          </p>
-        </div>
-        <div class="algo-box">
-          <pre class="pseudo_code">
+		<section class="algo-contents">
+			<div class="container2">
+				<div class="algo-def">
+					<p class="def">
+						<span class="tit">Defination :</span> <br />
+						<a href="https://en.wikipedia.org/wiki/Bubble_sort"
+							>Bubble sort</a
+						>
+						is a simple sorting algorithm. The algorithm starts at
+						the beginning of the data set. It compares the first two
+						elements, and if the first is greater than the second,
+						it swaps them. It continues doing this for each pair of
+						adjacent elements to the end of the data set. It then
+						starts again with the first two elements, repeating
+						until no swaps have occurred on the last pass.
+					</p>
+					<p class="tc">
+						<span class="tit">Performance</span> <br />
+						<span class="one">Best-case Time complexity: </span>
+						<span class="theory">O(n<span>&#178;</span>)</span>
+						<br />
+						<span class="one">Average-case Time complexity: </span>
+						<span class="theory">O(n<span>&#178;</span>)</span>
+						<br />
+						<span class="one">worst-case Time complexity: </span>
+						<span class="theory">O(n)</span> <br />
+					</p>
+					<p class="sc">
+						<span class="tit">Space complexity</span> <br />
+						<span class="one">worst-case Space complexity: </span>
+						<span class="theory">O(1)</span> <br />
+					</p>
+				</div>
+				<div class="algo-box">
+					<pre class="pseudo_code">
 
             async function bubbelSort(Arr){
               for (var i = len-1; i>=0; i--){
@@ -152,88 +182,97 @@
           }
     
               </pre
-          >
-        </div>
-      </div>
+					>
+				</div>
+			</div>
 
-      <!-- ===================================== Footer section=========================================== -->
+			<!-- ===================================== Footer section=========================================== -->
 
-      <footer class="footer1">
-        <div class="footer_sec">
-          <div class="head">
-            <div class="logo">
-              <a href="">Nikithkumar N</a>
-            </div>
-            <div class="social">
-              <a href="https://www.facebook.com/itznikith.kumar/"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a href="https://github.com/TheThunderB0lt/"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/nikithkumar/"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-              <a href="https://twitter.com/NIKITHKUMARN1/"
-                ><i class="fab fa-twitter"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <div class="copy_right1">
-        <p class="text-center">
-          Designed and built with
-          <span class="icon"><i class="fa fa-heart fa-lg"></i></span> by
-          <a href="#" target="_blank"> The ThunderBolt</a>
-        </p>
-        <!-- <p>&copy; 2020 <span>NIKITH KUMAR N</span> | All Rights Reserved</p> -->
-      </div>
-    </section>
+			<footer class="footer1">
+				<div class="footer_sec">
+					<div class="head">
+						<div class="logo">
+							<a href="">Nikithkumar N</a>
+						</div>
+						<div class="social">
+							<a href="https://www.facebook.com/itznikith.kumar/"
+								><i class="fab fa-facebook"></i
+							></a>
+							<a href="https://github.com/TheThunderB0lt/"
+								><i class="fab fa-github"></i
+							></a>
+							<a href="https://www.linkedin.com/in/nikithkumar/"
+								><i class="fab fa-linkedin"></i
+							></a>
+							<a href="https://twitter.com/NIKITHKUMARN1/"
+								><i class="fab fa-twitter"></i
+							></a>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="copy_right1">
+				<p class="text-center">
+					Designed and built with
+					<span class="icon"><i class="fa fa-heart fa-lg"></i></span>
+					by
+					<a href="#" target="_blank"> The ThunderBolt</a>
+				</p>
+				<!-- <p>&copy; 2020 <span>NIKITH KUMAR N</span> | All Rights Reserved</p> -->
+			</div>
+		</section>
 
-    <!-- ======================================= Navbar navigation =================================================== -->
+		<!-- ======================================= Navbar navigation =================================================== -->
 
-    <script type="text/javascript">
-      window.addEventListener("scroll", function () {
-        const header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0);
-      });
+		<script type="text/javascript">
+			window.addEventListener("scroll", function () {
+				const header = document.querySelector("header");
+				header.classList.toggle("sticky", window.scrollY > 0);
+			});
 
-      function toggleMenu() {
-        const menuToggle = document.querySelector(".menuToggle");
-        const navigation = document.querySelector(".navigation");
-        menuToggle.classList.toggle("active");
-        navigation.classList.toggle("active");
-      }
-    </script>
+			function toggleMenu() {
+				const menuToggle = document.querySelector(".menuToggle");
+				const navigation = document.querySelector(".navigation");
+				menuToggle.classList.toggle("active");
+				navigation.classList.toggle("active");
+			}
+		</script>
 
-    <!-- ============================== javascript scrolldown aimated button =================================== -->
+		<!-- ============================== javascript scrolldown aimated button =================================== -->
 
-    <script>
-      var btn = $("#button");
-      $(window).scroll(function () {
-        if ($(window).scrollTop() > 750) {
-          btn.addClass("show");
-        } else {
-          btn.removeClass("show");
-        }
-      });
+		<script>
+			var btn = $("#button");
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > 750) {
+					btn.addClass("show");
+				} else {
+					btn.removeClass("show");
+				}
+			});
 
-      btn.on("click", function (e) {
-        e.preventDefault();
-        $("html, body").animate({ scrollTop: 0 }, "300");
-      });
-    </script>
+			btn.on("click", function (e) {
+				e.preventDefault();
+				$("html, body").animate({ scrollTop: 0 }, "300");
+			});
+		</script>
 
-    <!--=========================== Animate on scroll js file=========================== -->
+		<!--=========================== Animate on scroll js file=========================== -->
 
-    <script>
-      AOS.init();
-    </script>
+		<script>
+			AOS.init();
+		</script>
 
-    <!-- ======================================== javascript files========================================= -->
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
 
-    <script src="/source/assets/Master/js/App.js"></script>
-    <script src="/source/assets/Master/js/algorithms/bubble_sort.js"></script>
-  </body>
+		<!--=========================== js file ===================================== -->
+		<script src="/source/assets/Registration/js/login.js"></script>
+		<script src="/source/assets/Master/js/index.js"></script>
+
+		<!-- ======================================== javascript files========================================= -->
+
+		<script src="/source/assets/Master/js/App.js"></script>
+		<script src="/source/assets/Master/js/algorithms/bubble_sort.js"></script>
+	</body>
 </html>
