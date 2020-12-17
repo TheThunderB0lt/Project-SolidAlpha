@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>| Algo-Visualizer-Home |</title>
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="/source/assets/Images/logo/lg3.png"
-    />
-    <!-- ============================================ fonts ============================================= -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE-edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>| Algo-Visualizer-Home |</title>
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="/source/assets/Images/logo/lg3.png"
+		/>
+		<!-- ============================================ fonts ============================================= -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
 
-    <!-- ====================================== Bootstrap css file======================================== -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
+		<!-- ====================================== Bootstrap css file======================================== -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		/>
 
-    <!-- ======================================== css file================================================ -->
-    <link rel="stylesheet" href="/source/assets/Master/css/style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<!-- ======================================== css file================================================ -->
+		<link rel="stylesheet" href="source/assets/Master/css/style.css" />
+		<link
+			href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+			rel="stylesheet"
+		/>
 
-    <!-- ========================================== js file============================================== -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </head>
+		<!-- ========================================== js file============================================== -->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
 
-  <body>
-    <!-- ============================================= Loader ================================================== -->
-    <!-- <div class="loader_bg">
+	<body>
+		<!-- ============================================= Loader ================================================== -->
+		<!-- <div class="loader_bg">
       <div class="wrapper">
         <div class="circle"></div>
         <div class="circle"></div>
@@ -47,137 +50,181 @@
       </div>
     </div> -->
 
-    <!-- ======================================= animate scrolldown =================================================== -->
-    <div class="scrolldown"><b>SCROLL DOWN - -</b><span></span></div>
+		<!-- ======================================= animate scrolldown =================================================== -->
+		<div class="scrolldown"><b>SCROLL DOWN - -</b><span></span></div>
 
-    <header>
-      <a href="" class="logo"
-        ><img src="/source/assets/Images/logo/lg3.png" alt=""
-      /></a>
-      <div class="menuToggle" onclick="toggleMenu();"></div>
-      <ul class="navigation">
-        <li><a href="" class="active">Home</a></li>
-        <li><a href="#two">About</a></li>
-        <li><a href="#three">Contact</a></li>
-        <li class="">
-          <a href=""
-            ><span>Login</span></a
-          >
-        </li>
-      </ul>
-    </header>
+		<header>
+			<a href="" class="logo"
+				><img src="/source/assets/Images/logo/lg3.png" alt=""
+			/></a>
+			<div class="menuToggle" onclick="toggleMenu();"></div>
+			<ul class="navigation">
+				<li>
+					<a href="#one" class="active">Home</a>
+				</li>
+				<li class="logged-in" style="display: none">
+					<a href="#about">About</a>
+				</li>
+				<li class="logged-in" style="display: none">
+					<a href="#three">Account</a>
+				</li>
+				<li class="logged-in" style="display: none">
+					<a
+						href="/source/templates/registration/login.html"
+						id="logout"
+						><span class="sign">Logout</span></a
+					>
+				</li>
+				<li class="logged-out" style="display: none">
+					<a href="/source/templates/registration/login.html"
+						><span>Login</span></a
+					>
+				</li>
+				<li class="logged-out" style="display: none">
+					<a href="/source/templates/registration/signup.html"
+						><span class="sign">Signup</span></a
+					>
+				</li>
+			</ul>
+		</header>
 
-    <section class="banner" id="one">
-      <div class="content" data-aos="fade-right"
-      data-aos-offset="400"
-      data-aos-easing="ease-in-sine">
-        <h4>This is</h4>
-        <h2>Algo <br /><span>Visualizer</span></h2>
-        <p>
-          The best way to understand complex data structures is to see them in
-          action. This project is developed in an interactive animations for a
-          variety of data structures and algorithms..
-        </p>
-        <a href="/source/templates/Master/algo_menu.html" class="btn" data-aos="fade-up"
-        data-aos-duration="1500"
-          ><svg><rect></rect></svg>Explore</a
-        >
-      </div>
-      <div class="main-img" data-aos="fade-left"
-      data-aos-anchor="#example-anchor"
-      data-aos-offset="500"
-      data-aos-duration="500">
-        <img src="/source/assets/Images/svg/main.svg" alt="" />
-      </div>
-    </section>
+		<section class="banner" id="one">
+			<div
+				class="content"
+				data-aos="fade-right"
+				data-aos-offset="400"
+				data-aos-easing="ease-in-sine"
+			>
+				<h4>This is</h4>
+				<h2>Algo <br /><span>Visualizer</span></h2>
+				<p>
+					The best way to understand complex data structures is to see
+					them in action. This project is developed in an interactive
+					animations for a variety of data structures and algorithms..
+				</p>
+				<a
+					href="/source/templates/Master/algo_menu.html"
+					class="btn logged-in"
+					style="display: none"
+					data-aos="fade-up"
+					data-aos-duration="1500"
+					><svg><rect></rect></svg>Explore</a
+				>
+			</div>
+			<div
+				class="main-img"
+				data-aos="fade-left"
+				data-aos-anchor="#example-anchor"
+				data-aos-offset="500"
+				data-aos-duration="500"
+			>
+				<img src="/source/assets/Images/svg/main.svg" alt="" />
+			</div>
+		</section>
 
-    <section class="about-me" id="two">
-      <div class="row">
-        <div class="col50" data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine">
-          <h2 class="abt-title">Let me introduce myself</h2>
-          <h3>Nikith Kumar N</h3>
-          <p>
-            USN: 1RI17CS028 <br />
-            RRIT-Bangalore <br />
-            Contact: 7337637319 <br />
-            Email: nikithkumarniki160698@gmail.com<br />
-          </p>
-          <div  data-aos="fade-up" data-aos-duration="1200">
-            <a href="" class="exp-btn">Discover Me</a>
-          </div>
-        </div>
+		<section class="about-me" id="two">
+			<div class="row">
+				<div
+					class="col50"
+					data-aos="fade-right"
+					data-aos-offset="300"
+					data-aos-easing="ease-in-sine"
+				>
+					<h2 class="abt-title">Let me introduce myself</h2>
+					<h3>Nikith Kumar N</h3>
+					<p>
+						USN: 1RI17CS028 <br />
+						RRIT-Bangalore <br />
+						Contact: 7337637319 <br />
+						Email: nikithkumarniki160698@gmail.com<br />
+					</p>
+					<div data-aos="fade-up" data-aos-duration="1200">
+						<a
+							href="https://github.com/TheThunderB0lt/"
+							class="exp-btn"
+							>Discover Me</a
+						>
+					</div>
+				</div>
 
-        <div class="col50" data-aos="fade-up"
-        data-aos-anchor-placement="center-bottom">
-          <div class="imgBx">
-            <img src="/source/assets/Images/svg/me1.svg" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
+				<div
+					class="col50"
+					data-aos="fade-up"
+					data-aos-anchor-placement="center-bottom"
+				>
+					<div class="imgBx">
+						<img src="/source/assets/Images/svg/me1.svg" alt="" />
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="foot-section" id="three">
-      <footer>
-        <div class="footer_sec">
-          <div class="head">
-            <div class="logo">
-              <a href="/">Nikithkumar. N</a>
-            </div>
-            <div class="social">
-              <a href="https://www.facebook.com/itznikith.kumar/"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a href="https://github.com/TheThunderB0lt/"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/nikithkumar/"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-              <a href="https://twitter.com/NIKITHKUMARN1/"
-                ><i class="fab fa-twitter"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <div class="copy_right">
-        <p class="text-center">
-          Designed and built with
-          <span class="icon"><i class="fa fa-heart fa-lg"></i></span> by
-          <a href="" target="_blank"> The ThunderBolt</a>
-        </p>
-        <!-- <p>&copy; 2020 <span>NIKITH KUMAR N</span> | All Rights Reserved</p> -->
-      </div>
-    </section>
+		<section class="foot-section" id="three">
+			<footer>
+				<div class="footer_sec">
+					<div class="head">
+						<div class="logo">
+							<a href="/">Nikithkumar. N</a>
+						</div>
+						<div class="social">
+							<a href="https://www.facebook.com/itznikith.kumar/"
+								><i class="fab fa-facebook"></i
+							></a>
+							<a href="https://github.com/TheThunderB0lt/"
+								><i class="fab fa-github"></i
+							></a>
+							<a href="https://www.linkedin.com/in/nikithkumar/"
+								><i class="fab fa-linkedin"></i
+							></a>
+							<a href="https://twitter.com/NIKITHKUMARN1/"
+								><i class="fab fa-twitter"></i
+							></a>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="copy_right">
+				<p class="text-center">
+					Designed and built with
+					<span class="icon"><i class="fa fa-heart fa-lg"></i></span>
+					by
+					<a href="" target="_blank"> The ThunderBolt</a>
+				</p>
+			</div>
+		</section>
 
-    <script>
-      setTimeout(function () {
-        $(".loader_bg").fadeToggle();
-      }, 1500);
-    </script>
+		<script>
+			setTimeout(function () {
+				$(".loader_bg").fadeToggle();
+			}, 1500);
+		</script>
 
-    <script type="text/javascript">
-      window.addEventListener("scroll", function () {
-        const header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0);
-      });
+		<script type="text/javascript">
+			window.addEventListener("scroll", function () {
+				const header = document.querySelector("header");
+				header.classList.toggle("sticky", window.scrollY > 0);
+			});
 
-      function toggleMenu() {
-        const menuToggle = document.querySelector(".menuToggle");
-        const navigation = document.querySelector(".navigation");
-        menuToggle.classList.toggle("active");
-        navigation.classList.toggle("active");
-      }
-    </script>
+			function toggleMenu() {
+				const menuToggle = document.querySelector(".menuToggle");
+				const navigation = document.querySelector(".navigation");
+				menuToggle.classList.toggle("active");
+				navigation.classList.toggle("active");
+			}
+		</script>
 
-    
-    <!--=========================== Animate on scroll js file=========================== -->
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
 
-    <script>
-      AOS.init();
-    </script>
-  </body>
-  </body>
+		<!--=========================== js file ===================================== -->
+		<script src="/source/assets/Registration/js/login.js"></script>
+		<script src="/source/assets/Master/js/index.js"></script>
+
+		<!--=========================== Animate on scroll js file=========================== -->
+
+		<script>
+			AOS.init();
+		</script>
+	</body>
 </html>
